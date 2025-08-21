@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Logo from "../Logo";
 import { Button } from "../ui/button";
 import { Phone } from "lucide-react";
+import SectionWrapper from "../SectionWrapper";
 
 export default function Footer() {
   const contacts = ["Kungsgatan 9, Stockholm", "Riverbank House, London"];
@@ -13,9 +14,9 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-[#232222] text-white py-16 px-6">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+    <footer className="bg-[#232222] text-white py-16">
+      <SectionWrapper className="">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-16">
           <div>
             <h3 className="text-xl font-medium mb-6">Contact</h3>
             <div className="space-y-2 text-[#bdbdbd]">
@@ -41,24 +42,24 @@ export default function Footer() {
             </div>
           </div>
 
-          <div>
-            <h3 className="text-xl font-medium mb-6">
+          <div className="max-w-sm">
+            <h3 className="text-xl font-medium  mb-6">
               Stay Updated with AI Insights
             </h3>
             <p className="text-[#bdbdbd] mb-6 leading-relaxed">
               Enter your email to receive the latest updates and insights on
               AI-powered solutions for your business.
             </p>
-            <div className="flex items-center gap-4 max-w-md">
+            <div className="flex items-center gap-4 bg-white rounded-lg px-2 py-1 ">
               <input
                 type="email"
                 placeholder="e-mail"
-                className="flex-1 px-4 py-3 bg-[#fcfcfc] border border-[#bdbdbd] rounded-md placeholder-[#bdbdbd] text-[#222222] focus:outline-none focus:ring-2 focus:ring-[#222222] focus:border-transparent"
+                className="flex-1 px-4 py-2  bg-[#fcfcfc]  rounded-md placeholder-black text-[#222222] focus:outline-none focus:ring-0 focus:ring-[#222222] focus:border-transparent"
               />
 
               <Button
-                variant="default"
-                className="bg-transparent hover:bg-transparent active:bg-transparent focus:bg-transparent"
+                variant={"Dark"}
+                className="bg-black"
               >
                 Send
               </Button>
@@ -74,7 +75,7 @@ export default function Footer() {
             © 2025 Valkiv AI. All rights reserved.
           </div>
         </div>
-      </div>
+      </SectionWrapper>
     </footer>
   );
 }

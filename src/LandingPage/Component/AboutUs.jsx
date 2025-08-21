@@ -25,7 +25,7 @@ export default function AboutUS() {
   ];
 
   return (
-    <div className=" bg-[#181818] text-white p-8 lg:p-16">
+    <div className="relative bg-[#181818]  lg:mt-10 md:mt-10    text-white  py-16">
       <SectionWrapper className="">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 mb-16">
           <div className="max-w-2xl">
